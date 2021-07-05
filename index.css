@@ -2,13 +2,73 @@ body{
     background-color: black;
 }
 img {
-    width:19%;
+    height: 30px;
+    width: 30px;
+    margin: -3px;
+}
+.images{
+    display: inline-block;
+    
+}
+#body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 70vh;
+   flex-direction: column;
+}
+.generate{
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid cyan;
+    transition: all 1s ease-in-out .1s;
+}
+.generate:hover{
+    background-color: black;
+    border: 2px solid cyan;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 40px;
+
+}
+input{
+    margin-top: 10px;
 }
 
 .hide{
     display:none;
 }
+#checkButton{
+    margin-top: 15px;
+    border: 1px solid cyan;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: whitesmoke;
+   
+}
+#checkButton:hover{
+    cursor: pointer;
+}
 
 #result{
     color:cyan;
+}
+.load{
+    border-radius: 89%;
+    width: 15px;
+    height: 15px;
+    border: 0.25rem solid red;
+    border-top-color: white ;
+    animation: spin 1s infinite linear;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }

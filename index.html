@@ -11,17 +11,21 @@
 </head>
 
 <body>
+    <section id="body">
     <noscript>Please enable JavaScript to view</noscript>
-    <button onclick="generatecaptcha()">Generate a captcha</button>
+    <button onclick="generatecaptcha()" class="generate ">Generate a captcha</button>
     <br>
-    <img src="" id="#1">
-    <img src="" id="#2">
-    <img src="" id="#3">
-    <img src="" id="#4">
-    <img src="" id="#5">
-    <input id="userInput" class="hide"/>
-    <button onclick="check()" class="hide" id="checkButton">check</button>
+    <div class="images">
+    <img src="" id="#1" >
+    <img src="" id="#2" >
+    <img src="" id="#3" >
+    <img src="" id="#4" >
+    <img src="" id="#5" >
+    </div>
+   <input id="userInput" class="hide"/>
+    <div onclick="check()" class="hide" id="checkButton">Verify</div>
     <p id="result"></p>
+    </section>
     <script type="text/javascript" src="index.js"></script>
 </body>
 

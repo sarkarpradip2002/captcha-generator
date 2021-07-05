@@ -1,8 +1,11 @@
 captchaString=null;
 const generatecaptcha = ()=>{
-    captchaString = ""
+    button=document.getElementById("checkButton");
+    button.innerHTML="Verify";
+    button.style.color="white";
+    captchaString = "";
     for(let i=1; i<=5; i++){
-        randomLetter = String.fromCharCode(Math.floor(Math.random()*26)+65);
+        randomLetter = String.fromCharCode(Math.floor(65+(90-65)*Math.random()));
         imageId = "#"+i;
         captchaString += randomLetter;
         document.getElementById(imageId).setAttribute('src',"images/"+randomLetter+".jpg");
@@ -12,12 +15,22 @@ const generatecaptcha = ()=>{
     document.getElementById("result").innerHTML = ""
 }
 
-const check=()=>{
-    userInput = document.getElementById("userInput").value
+    check=()=>{
+    userInput = document.getElementById("userInput").value;
+    button=document.getElementById("checkButton");
+    button.innerHTML='<div class="load"></div>';
+    console.log(userInput)
+    console.log(captchaString)
     if (userInput==captchaString){
-        result ="true";
+        setTimeout(()=>{
+            button.innerHTML=" Verified ";
+            button.style.color="#1bff1b";
+        },4000)
     }else{
-        result="false";
+        
+        setTimeout(()=>{
+            button.innerHTML=" Not matched !";
+            button.style.color="red";
+        },4000)
     }
-    document.getElementById("result").innerHTML = result
 }
